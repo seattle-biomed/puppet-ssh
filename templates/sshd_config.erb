@@ -5,7 +5,7 @@
 <%= k %>
 <%- v.sort.each do |key, value| -%>
     <%- if value.is_a?(Array) -%>
-    <%- value.each do |a| -%>
+    <%- value.sort.each do |a| -%>
     <%= key %> <%= a %>
     <%- end -%>
     <%- else -%>
@@ -14,7 +14,7 @@
 <%- end -%>
 <%- else -%>
 <%- if v.is_a?(Array) -%>
-<%- v.each do |a| -%>
+<%- v.sort.each do |a| -%>
 <%= k %> <%= a %>
 <%- end -%>
 <%- else -%>
